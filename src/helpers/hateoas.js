@@ -1,4 +1,3 @@
-
 export const HATEOASAll = (entity, data) => {
   const result = data.map((item) => ({
     nombre: item.nombre,

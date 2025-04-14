@@ -9,14 +9,6 @@ export const getJoyasModel = async () => {
   return response.rows
 }
 
-// GET JOYAS LIMIT
-export const limitJoyasModel = async (limits = 3) => {
-  const sqlQuery = 'SELECT * FROM inventario LIMIT $1'
-  const values = [Number(limits)]
-  const result = await pool.query(sqlQuery, values)
-  return result.rows
-}
-
 // GET JOYAS LIMIT ORDER
 export const limitOrderJoyasModel = async (
   order_by = 'id_DESC',
@@ -32,7 +24,7 @@ export const limitOrderJoyasModel = async (
     limits,
     offset
   )
-
+console.log(sqlQuery, "🌸🌸🌸🌸🌸")
   const result = await pool.query(sqlQuery)
   return result.rows
 }

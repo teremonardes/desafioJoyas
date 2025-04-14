@@ -1,21 +1,10 @@
-import { getJoyasModel, limitJoyasModel, limitOrderJoyasModel, filterJoyasModel } from '../models/joyasModels.js'
+import { getJoyasModel, limitOrderJoyasModel, filterJoyasModel } from '../models/joyasModels.js'
 import { HATEOASAll } from '../helpers/hateoas.js'
 
 export const getJoyasController = async (_, res) => {
   try {
     const joyas = await getJoyasModel()
     res.status(200).json({ joyas })
-  } catch (error) {
-    res.status(500).json({ error: 'No se pudo obtener las joyas' })
-    console.error('Error', error)
-  }
-}
-
-export const limitJoyasController = async (req, res) => {
-  try {
-    const { limits } = req.query
-    const result = await limitJoyasModel(limits)
-    res.status(200).json({ inventario: result })
   } catch (error) {
     res.status(500).json({ error: 'No se pudo obtener las joyas' })
     console.error('Error', error)
