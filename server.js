@@ -11,7 +11,7 @@ app.use(cors())
 app.use(express.json())
 
 app.use(reportarConsulta) // middleware para reportar consultas
-app.use(joyasRoutes)
+app.use('/api', joyasRoutes)
 
 app.use((req, res, next) => {
   const error = new Error('Ruta no encontrada')

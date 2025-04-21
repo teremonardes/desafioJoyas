@@ -1,0 +1,114 @@
+{
+    "info": {
+        "_postman_id": "99714ef1-cfbb-4456-bbc6-6a348c0ee60c",
+        "name": "JOYAS",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "get",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/api/joyas",
+                    "path": [
+                        "api",
+                        "joyas"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "limit",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/api/joyas/limits?limits=2",
+                    "query": [
+                        {
+                            "key": "limits",
+                            "value": "2"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "api",
+                        "joyas",
+                        "limits"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "FORMAT LIMIT",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/api/joyas/limits?order_by=stock_ASC&limits=6",
+                    "query": [
+                        {
+                            "key": "order_by",
+                            "value": "stock_ASC"
+                        },
+                        {
+                            "key": "limits",
+                            "value": "6"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "api",
+                        "joyas",
+                        "limits"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "filtros",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/api/joyas/filtros?precio_min=20000&metal=oro",
+                    "query": [
+                        {
+                            "key": "precio_min",
+                            "value": "20000"
+                        },
+                        {
+                            "key": "metal",
+                            "value": "oro"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "api",
+                        "joyas",
+                        "filtros"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        }
+    ]
+}
